@@ -12,7 +12,7 @@
   },
   "servers": [
     {
-      "url": "https://api.mews-demo.com"
+      "url": "https://app.mews-demo.com"
     }
   ],
   "paths": {
@@ -21585,6 +21585,16 @@
               }
             }
           },
+          "409": {
+            "description": "The request cannot be completed because the data has changed, causing conflict between the state on the client and the server. To get around this error, try refreshing the data on the client and resubmitting the request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectorApiExceptionResult"
+                }
+              }
+            }
+          },
           "429": {
             "description": "Error caused by too many requests sent in a given amount of time. Response contains `Retry-After` header indicating how long the user agent should wait before making a follow-up request. For more information, see [Request limits](https://mews-systems.gitbook.io/connector-api/guidelines/requests#request-limits).",
             "content": {
@@ -21706,6 +21716,16 @@
           },
           "408": {
             "description": "Error caused by heavy request that takes too long to process (typically tens of seconds). To get around this, request data in smaller batches. For more information, see [Request timeouts](https://mews-systems.gitbook.io/connector-api/guidelines/requests#request-timeouts)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectorApiExceptionResult"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "The request cannot be completed because the data has changed, causing conflict between the state on the client and the server. To get around this error, try refreshing the data on the client and resubmitting the request.",
             "content": {
               "application/json": {
                 "schema": {
@@ -25952,6 +25972,7 @@
           },
           "ChainIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -25983,7 +26004,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -26251,6 +26272,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -26261,6 +26283,7 @@
           },
           "AccountingCategoryIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -26270,7 +26293,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -26521,6 +26544,7 @@
           },
           "ItemIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -26531,6 +26555,7 @@
           },
           "RebatedItemIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -26540,13 +26565,13 @@
             "nullable": true
           },
           "ClosedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ConsumedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "TimeFilter": {
             "type": "string",
@@ -26732,6 +26757,8 @@
             "description": "Token identifying the client application."
           },
           "Bills": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/OutletBillParameters"
@@ -26807,6 +26834,8 @@
             "format": "uuid"
           },
           "Restrictions": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RestrictionData"
@@ -27030,6 +27059,7 @@
           },
           "AddressIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27071,6 +27101,7 @@
           },
           "ChainIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27081,6 +27112,7 @@
           },
           "AccountIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27091,6 +27123,7 @@
           },
           "AddressIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27100,7 +27133,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -27334,6 +27367,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27344,6 +27378,7 @@
           },
           "AgeCategoryIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27363,7 +27398,7 @@
             "description": "Unique identifiers of [Services](https://mews-systems.gitbook.io/connector-api/operations/services/#service) where the age category belong to."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -27700,6 +27735,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27710,6 +27746,7 @@
           },
           "AvailabilityAdjustmentIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -27719,7 +27756,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -27864,6 +27901,7 @@
             "nullable": true
           },
           "ExternalIdentifier": {
+            "maxLength": 255,
             "type": "string",
             "description": "Identifier of the block from external system.",
             "nullable": true
@@ -27964,6 +28002,7 @@
             "nullable": true
           },
           "ExternalIdentifier": {
+            "maxLength": 255,
             "type": "string",
             "nullable": true
           },
@@ -28067,6 +28106,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -28080,6 +28120,7 @@
           },
           "ServiceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -28090,6 +28131,7 @@
           },
           "AvailabilityBlockIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -28099,19 +28141,20 @@
             "nullable": true
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "CollidingUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ReleasedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ExternalIdentifiers": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -28531,6 +28574,12 @@
             "type": "string",
             "format": "uuid"
           },
+          "AssociatedAccountId": {
+            "type": "string",
+            "description": "Account that has a possible link with the owner of the bill.",
+            "format": "uuid",
+            "nullable": true
+          },
           "Name": {
             "type": "string",
             "nullable": true
@@ -28727,6 +28776,10 @@
         "x-enumNames": [
           "Bill",
           "CorrectiveBill"
+        ],
+        "x-enumDescriptions": [
+          "",
+          ""
         ]
       },
       "BillCustomerData": {
@@ -28804,6 +28857,8 @@
             "nullable": true
           },
           "BillIds": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -28890,6 +28945,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -28933,6 +28989,7 @@
           },
           "BillIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -28943,6 +29000,7 @@
           },
           "CustomerIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29231,6 +29289,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29261,7 +29320,7 @@
             "description": "Unique identifiers of the [Services](https://mews-systems.gitbook.io/connector-api/operations/services/#service) from which the business segments are requested."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -29413,6 +29472,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29423,6 +29483,7 @@
           },
           "ServiceIds": {
             "maxItems": 100,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29432,6 +29493,7 @@
           },
           "CancellationPolicyIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29442,6 +29504,7 @@
           },
           "RateGroupIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29451,7 +29514,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -29559,6 +29622,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29569,6 +29633,7 @@
           },
           "Ids": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29578,7 +29643,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -29691,6 +29756,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -29710,7 +29776,7 @@
             "nullable": true
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "StartUtc": {
             "type": "string",
@@ -30081,6 +30147,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30091,6 +30158,7 @@
           },
           "CompanionshipIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30104,6 +30172,7 @@
           },
           "ReservationIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30114,6 +30183,7 @@
           },
           "CustomerIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30124,6 +30194,7 @@
           },
           "ReservationGroupIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30133,7 +30204,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -30789,6 +30860,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30799,6 +30871,7 @@
           },
           "CompanyContractIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30809,6 +30882,7 @@
           },
           "CompanyIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30828,7 +30902,7 @@
             "description": "Unique identifiers of [Services](https://mews-systems.gitbook.io/connector-api/operations/services/#service) where the Travel agency contract belong to."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -30869,13 +30943,9 @@
             "type": "string",
             "description": "Token identifying the client application."
           },
-          "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
-          "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
           "ChainIds": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -30883,6 +30953,12 @@
             },
             "description": "Unique identifiers of the chain. If not specified, the operation returns data for all chains within scope of the Access Token.",
             "nullable": true
+          },
+          "CreatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
+          },
+          "UpdatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "TimeFilter": {
             "anyOf": [
@@ -31481,6 +31557,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -31491,6 +31568,7 @@
           },
           "CounterIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -31508,7 +31586,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -31844,6 +31922,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -31854,6 +31933,7 @@
           },
           "CreditCardIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -31864,6 +31944,7 @@
           },
           "CustomerIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -31873,7 +31954,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -32157,6 +32238,7 @@
               "type": "string",
               "format": "uuid"
             },
+            "description": "Unique identifiers of the Exchange Rates. If not specified, the operation returns all exchange rates.",
             "nullable": true
           },
           "EnterpriseIds": {
@@ -33066,19 +33148,21 @@
             "type": "string",
             "description": "Token identifying the client application."
           },
-          "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
-          "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
           "ChainIds": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
               "format": "uuid"
             },
             "nullable": true
+          },
+          "CreatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
+          },
+          "UpdatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Extent": {
             "$ref": "#/components/schemas/CustomerExtent"
@@ -33099,7 +33183,7 @@
             "deprecated": true
           },
           "DeletedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -33111,6 +33195,7 @@
           },
           "CustomerIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -33121,6 +33206,7 @@
           },
           "Emails": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -33130,6 +33216,7 @@
           },
           "FirstNames": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -33139,6 +33226,7 @@
           },
           "LastNames": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -33148,6 +33236,7 @@
           },
           "LoyaltyCodes": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -33189,6 +33278,7 @@
           },
           "CustomerIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -33846,6 +33936,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -33856,6 +33947,7 @@
           },
           "DepartmentIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -33865,7 +33957,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -33936,22 +34028,29 @@
       },
       "Device": {
         "title": "Device",
+        "required": [
+          "Id",
+          "Name",
+          "Type"
+        ],
         "type": "object",
         "properties": {
           "Id": {
             "type": "string",
+            "description": "Unique identifier of the device.",
             "format": "uuid"
           },
           "Type": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/DeviceTypeEnum"
           },
           "Name": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "description": "Name of the device."
           },
           "Identifier": {
             "type": "string",
+            "description": "Device identifier (for internal purposes).",
             "nullable": true
           }
         },
@@ -35844,6 +35943,9 @@
       },
       "DeviceResult": {
         "title": "DeviceResult",
+        "required": [
+          "Devices"
+        ],
         "type": "object",
         "properties": {
           "Devices": {
@@ -35851,12 +35953,37 @@
             "items": {
               "$ref": "#/components/schemas/Device"
             },
-            "description": "The devices.",
-            "nullable": true
+            "description": "The devices."
           }
         },
         "additionalProperties": false,
         "x-schema-id": "DeviceResult"
+      },
+      "DeviceTypeEnum": {
+        "title": "Device type",
+        "enum": [
+          "Printer",
+          "PaymentTerminal",
+          "KeyCutter",
+          "FiscalMachine",
+          "PassportScanner"
+        ],
+        "type": "string",
+        "description": "Type of the device.\n\nPrinter ([Printer command data](https://mews-systems.gitbook.io/connector-api/operations/commands#printer-command-data))\n\nPaymentTerminal ([Payment terminal command data](https://mews-systems.gitbook.io/connector-api/operations/commands#payment-terminal-command-data))\n\nKeyCutter ([Key cutter command data](https://mews-systems.gitbook.io/connector-api/operations/commands#key-cutter-command-data))\n\nFiscalMachine ([Fiscal machine command data](https://mews-systems.gitbook.io/connector-api/operations/commands#fiscal-machine-command-data))\n\nPassportScanner ([Passport scanner command data](https://mews-systems.gitbook.io/connector-api/operations/commands#passport-scanner-command-data))",
+        "x-enumNames": [
+          "Printer",
+          "PaymentTerminal",
+          "KeyCutter",
+          "FiscalMachine",
+          "PassportScanner"
+        ],
+        "x-enumDescriptions": [
+          "[Printer command data](https://mews-systems.gitbook.io/connector-api/operations/commands#printer-command-data)",
+          "[Payment terminal command data](https://mews-systems.gitbook.io/connector-api/operations/commands#payment-terminal-command-data)",
+          "[Key cutter command data](https://mews-systems.gitbook.io/connector-api/operations/commands#key-cutter-command-data)",
+          "[Fiscal machine command data](https://mews-systems.gitbook.io/connector-api/operations/commands#fiscal-machine-command-data)",
+          "[Passport scanner command data](https://mews-systems.gitbook.io/connector-api/operations/commands#passport-scanner-command-data)"
+        ]
       },
       "Document": {
         "title": "Document",
@@ -36313,10 +36440,10 @@
             "nullable": true
           },
           "LinkedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Limitation": {
             "$ref": "#/components/schemas/Limitation"
@@ -36573,6 +36700,7 @@
           },
           "ExportIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -37287,17 +37415,31 @@
         "additionalProperties": false,
         "x-schema-id": "IdealData"
       },
-      "ImageResizeMode": {
+      "ImageResizeModeEnum": {
+        "title": "Image resize mode",
         "enum": [
           "Cover",
           "CoverExact",
           "Fit",
           "FitExact"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "Mode how the image should be resized to the desired width and height.\n\nCover (Resize to fit within the specified size, so the result might be smaller than requested.)\n\nCoverExact (Resize and pad to exactly fit within the specified size.)\n\nFit (Resize to fit within the specified size, so the result might be smaller than requested.)\n\nFitExact (Resize and pad to exactly fit within the specified size.)",
+        "x-enumNames": [
+          "Cover",
+          "CoverExact",
+          "Fit",
+          "FitExact"
+        ],
+        "x-enumDescriptions": [
+          "Resize to fit within the specified size, so the result might be smaller than requested.",
+          "Resize and pad to exactly fit within the specified size.",
+          "Resize to fit within the specified size, so the result might be smaller than requested.",
+          "Resize and pad to exactly fit within the specified size."
+        ]
       },
       "ImageSizeParameters": {
-        "title": "ImageSizeParameters",
+        "title": "Image size parameters",
         "required": [
           "ImageId"
         ],
@@ -37305,25 +37447,23 @@
         "properties": {
           "ImageId": {
             "type": "string",
+            "description": "Unique identifier of the image.",
             "format": "uuid"
           },
           "Width": {
             "type": "integer",
+            "description": "Desired width of the image.",
             "format": "int32",
             "nullable": true
           },
           "Height": {
             "type": "integer",
+            "description": "Desired height of the image.",
             "format": "int32",
             "nullable": true
           },
           "ResizeMode": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/ImageResizeMode"
-              }
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/ImageResizeModeEnum"
           }
         },
         "additionalProperties": false,
@@ -37331,6 +37471,10 @@
       },
       "ImageUrl": {
         "title": "Image URL",
+        "required": [
+          "ImageId",
+          "Url"
+        ],
         "type": "object",
         "properties": {
           "ImageId": {
@@ -37339,9 +37483,9 @@
             "format": "uuid"
           },
           "Url": {
+            "minLength": 1,
             "type": "string",
-            "description": "URL of the image.",
-            "nullable": true
+            "description": "URL of the image."
           }
         },
         "additionalProperties": false,
@@ -37385,6 +37529,9 @@
       },
       "ImageUrlResult": {
         "title": "ImageUrlResult",
+        "required": [
+          "ImageUrls"
+        ],
         "type": "object",
         "properties": {
           "ImageUrls": {
@@ -37392,8 +37539,7 @@
             "items": {
               "$ref": "#/components/schemas/ImageUrl"
             },
-            "description": "URLs of the images.",
-            "nullable": true
+            "description": "URLs of the images."
           }
         },
         "additionalProperties": false,
@@ -38162,6 +38308,7 @@
           },
           "LoyaltyMembershipIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -38198,12 +38345,6 @@
             "type": "string",
             "description": "Token identifying the client application."
           },
-          "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
-          "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
           "ChainIds": {
             "maxItems": 100,
             "minItems": 1,
@@ -38214,6 +38355,12 @@
             },
             "description": "Unique identifiers of the chain. If not specified, the operation returns data for all chains within scope of the Access Token.",
             "nullable": true
+          },
+          "CreatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
+          },
+          "UpdatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "LoyaltyMembershipIds": {
             "maxItems": 1000,
@@ -38478,6 +38625,7 @@
           },
           "LoyaltyProgramIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -38514,14 +38662,9 @@
             "type": "string",
             "description": "Token identifying the client application."
           },
-          "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
-          "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
           "ChainIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -38529,6 +38672,12 @@
             },
             "description": "Unique identifiers of the chain. If not specified, the operation returns data for all chains within scope of the Access Token.",
             "nullable": true
+          },
+          "CreatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
+          },
+          "UpdatedUtc": {
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "LoyaltyProgramIds": {
             "maxItems": 1000,
@@ -38573,6 +38722,8 @@
         "type": "object",
         "properties": {
           "LoyaltyPrograms": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyProgram"
@@ -38661,11 +38812,13 @@
             "format": "uuid"
           },
           "Name": {
+            "maxLength": 50,
             "minLength": 1,
             "type": "string",
             "description": "Name of the loyalty tier."
           },
           "Code": {
+            "maxLength": 50,
             "minLength": 1,
             "type": "string",
             "description": "Code of the loyalty tier."
@@ -38738,6 +38891,7 @@
           },
           "LoyaltyTierIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -38815,7 +38969,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Limitation": {
             "$ref": "#/components/schemas/Limitation"
@@ -38832,6 +38986,7 @@
         "type": "object",
         "properties": {
           "LoyaltyTiers": {
+            "maxItems": 1000,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyTier"
@@ -38988,6 +39143,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -38998,6 +39154,7 @@
           },
           "MessageThreadIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -39006,10 +39163,7 @@
             "description": "Unique identifiers of [Message threads](https://mews-systems.gitbook.io/connector-api/operations/messagethreads/#message-thread) from where to return messages."
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
-          "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax1"
           }
         },
         "additionalProperties": false,
@@ -39154,6 +39308,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -39164,6 +39319,7 @@
           },
           "MessageThreadIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -39173,10 +39329,10 @@
             "nullable": true
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -39277,6 +39433,7 @@
           },
           "AccountNotes": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AccountNoteAddParameters"
@@ -39363,6 +39520,7 @@
           },
           "AccountNoteUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AccountNoteUpdateParameters"
@@ -39579,6 +39737,7 @@
           },
           "AvailabilityBlocks": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AvailabilityBlockAddParameters"
@@ -39622,6 +39781,7 @@
           },
           "AvailabilityBlockIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -39637,6 +39797,7 @@
         "title": "MultipleAvailabilityBlockUpdateParameters",
         "required": [
           "AccessToken",
+          "AvailabilityBlocks",
           "Client",
           "ClientToken"
         ],
@@ -39664,12 +39825,13 @@
             "nullable": true
           },
           "AvailabilityBlocks": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AvailabilityBlockUpdateParameters"
             },
-            "description": "Availability blocks to be updated.",
-            "nullable": true
+            "description": "Availability blocks to be updated."
           }
         },
         "additionalProperties": false,
@@ -39724,7 +39886,8 @@
         "required": [
           "AccessToken",
           "Client",
-          "ClientToken"
+          "ClientToken",
+          "TravelAgencyContracts"
         ],
         "type": "object",
         "properties": {
@@ -39745,12 +39908,12 @@
           },
           "TravelAgencyContracts": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TravelAgencyContractAddParameters"
             },
-            "description": "Information about travel agency contracts to be created.",
-            "nullable": true
+            "description": "Information about travel agency contracts to be created."
           }
         },
         "additionalProperties": false,
@@ -39800,6 +39963,7 @@
           },
           "TravelAgencyContractIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -39838,6 +40002,7 @@
           },
           "TravelAgencyContractUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TravelAgencyContractUpdateParameters"
@@ -39880,6 +40045,7 @@
           },
           "CompanyIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -39951,6 +40117,7 @@
           },
           "CustomerIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -39995,6 +40162,7 @@
           },
           "LoyaltyMemberships": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyMembershipAddParameters"
@@ -40038,6 +40206,7 @@
           },
           "LoyaltyMembershipUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyMembershipUpdateParameters"
@@ -40081,6 +40250,7 @@
           },
           "LoyaltyPrograms": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyProgramAddParameters"
@@ -40124,6 +40294,7 @@
           },
           "LoyaltyProgramUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyProgramUpdateParameters"
@@ -40167,6 +40338,7 @@
           },
           "LoyaltyTiers": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyTierAddParameters"
@@ -40204,6 +40376,7 @@
           },
           "LoyaltyTierUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoyaltyTierUpdateParameters"
@@ -40284,6 +40457,7 @@
           },
           "PaymentRequests": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PaymentRequestAddParameters"
@@ -40321,6 +40495,7 @@
           },
           "PaymentRequestIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -40490,6 +40665,7 @@
           },
           "ReservationUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ReservationUpdateParameters"
@@ -40537,7 +40713,8 @@
         "required": [
           "AccessToken",
           "Client",
-          "ClientToken"
+          "ClientToken",
+          "ResourceAccessTokenParameters"
         ],
         "type": "object",
         "properties": {
@@ -40557,12 +40734,13 @@
             "description": "Token identifying the client application."
           },
           "ResourceAccessTokenParameters": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ResourceAccessTokenParameters"
             },
-            "description": "Parameters of [Resource access token](https://mews-systems.gitbook.io/connector-api/operations/#resource-access-token).",
-            "nullable": true
+            "description": "Parameters of [Resource access token](https://mews-systems.gitbook.io/connector-api/operations/#resource-access-token)."
           }
         },
         "additionalProperties": false,
@@ -40631,6 +40809,7 @@
           },
           "ResourceBlocks": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ResourceBlockAddParameters"
@@ -40668,6 +40847,7 @@
           },
           "ResourceUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ResourceUpdateParameters"
@@ -40705,6 +40885,7 @@
           },
           "RoutingRules": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RoutingRuleAddParameter"
@@ -40862,6 +41043,7 @@
           },
           "VoucherParameters": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/VoucherAddParameters"
@@ -40905,6 +41087,7 @@
           },
           "VoucherCodeParameters": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/VoucherCodeAddParameters"
@@ -40948,6 +41131,7 @@
           },
           "VoucherCodeIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -40992,6 +41176,7 @@
           },
           "VoucherIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -41036,6 +41221,7 @@
           },
           "VoucherUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/VoucherUpdateParameters"
@@ -41323,6 +41509,10 @@
             "format": "uuid",
             "nullable": true
           },
+          "ExternalIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
           "UnitCount": {
             "type": "integer",
             "description": "Unit count of item, i.e. the number of sub-items or units, if applicable.",
@@ -41500,6 +41690,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -41553,19 +41744,19 @@
             "nullable": true
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ConsumedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "CanceledUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ClosedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Currency": {
             "type": "string",
@@ -42037,6 +42228,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -42047,6 +42239,7 @@
           },
           "OutletIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -42056,7 +42249,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -42269,6 +42462,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -42279,6 +42473,7 @@
           },
           "Ids": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -42302,13 +42497,13 @@
             "deprecated": true
           },
           "ConsumedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ClosedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Currency": {
             "type": "string",
@@ -42713,6 +42908,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -42754,19 +42950,19 @@
             "nullable": true
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ChargedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ClosedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "SettlementUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Currency": {
             "type": "string",
@@ -43075,11 +43271,13 @@
             "format": "date-time"
           },
           "Description": {
+            "maxLength": 1000,
             "minLength": 1,
             "type": "string",
             "description": "Description of the payment request."
           },
           "Notes": {
+            "maxLength": 1000,
             "type": "string",
             "description": "Payment request's notes.",
             "nullable": true
@@ -43179,6 +43377,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -43220,7 +43419,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "States": {
             "type": "array",
@@ -43253,6 +43452,7 @@
         "type": "object",
         "properties": {
           "PaymentRequests": {
+            "maxItems": 1000,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PaymentRequest"
@@ -45254,6 +45454,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -45264,6 +45465,7 @@
           },
           "ProductCategoryIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -45274,6 +45476,7 @@
           },
           "ServiceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -45283,7 +45486,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -45419,6 +45622,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -45453,7 +45657,7 @@
             "deprecated": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -45559,6 +45763,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -45677,6 +45882,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -45716,8 +45922,18 @@
             },
             "nullable": true
           },
+          "LinkedReservationIds": {
+            "maxItems": 1000,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "States": {
             "type": "array",
@@ -46034,6 +46250,7 @@
           },
           "Rates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RateAddData"
@@ -46055,6 +46272,7 @@
         "type": "object",
         "properties": {
           "Rates": {
+            "maxItems": 1000,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Rate"
@@ -46118,6 +46336,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -46141,7 +46360,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ServiceIds": {
             "maxItems": 1000,
@@ -46270,6 +46489,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -46280,6 +46500,7 @@
           },
           "RateGroupIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -46290,6 +46511,7 @@
           },
           "ServiceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -46300,6 +46522,7 @@
           },
           "ExternalIdentifiers": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -46308,7 +46531,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -46507,6 +46730,7 @@
           },
           "PriceUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RatePriceUpdate"
@@ -46724,6 +46948,7 @@
         "type": "object",
         "properties": {
           "Rates": {
+            "maxItems": 1000,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Rate"
@@ -46732,6 +46957,7 @@
             "nullable": true
           },
           "RateGroups": {
+            "maxItems": 1000,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RateGroupOld"
@@ -47129,6 +47355,8 @@
             "nullable": true
           },
           "Reservations": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ReservationData"
@@ -47202,6 +47430,8 @@
             "nullable": true
           },
           "ReservationIds": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47640,6 +47870,7 @@
           },
           "GroupIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47650,6 +47881,7 @@
           },
           "ReservationIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47660,6 +47892,7 @@
           },
           "CustomerIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47670,6 +47903,7 @@
           },
           "AssignedResourceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47680,6 +47914,7 @@
           },
           "RateIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47690,6 +47925,7 @@
           },
           "BusinessSegmentIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47700,6 +47936,7 @@
           },
           "ChannelNumbers": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -47709,6 +47946,7 @@
           },
           "Numbers": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -47817,6 +48055,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47827,6 +48066,7 @@
           },
           "ReservationGroupIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -47836,7 +48076,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -47910,6 +48150,7 @@
           },
           "ReservationIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -48600,6 +48841,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -48631,6 +48873,7 @@
           },
           "ReservationGroupIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -48661,13 +48904,13 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "CollidingUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ScheduledStartUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "States": {
             "type": "array",
@@ -49207,6 +49450,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49216,6 +49460,8 @@
             "nullable": true
           },
           "ResourceAccessTokenIds": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49225,6 +49471,8 @@
             "nullable": true
           },
           "ServiceOrderIds": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49234,10 +49482,10 @@
             "nullable": true
           },
           "CollidingUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -49413,6 +49661,18 @@
           "AllocatedBlockAvailability",
           "UsableResources",
           "ActiveResources"
+        ],
+        "x-enumDescriptions": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
         ]
       },
       "ResourceBlock": {
@@ -49553,6 +49813,7 @@
           },
           "ResourceBlockIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49607,6 +49868,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49620,6 +49882,7 @@
           },
           "ResourceBlockIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49630,6 +49893,7 @@
           },
           "AssignedResourceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49639,13 +49903,13 @@
             "nullable": true
           },
           "CollidingUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -49847,6 +50111,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49972,6 +50237,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49982,6 +50248,7 @@
           },
           "ResourceCategoryIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -49992,6 +50259,7 @@
           },
           "ServiceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50000,7 +50268,7 @@
             "description": "Unique identifiers of [Services](https://mews-systems.gitbook.io/connector-api/operations/services/#service) to which the resource categories belong."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -50092,6 +50360,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50415,6 +50684,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50425,6 +50695,7 @@
           },
           "ResourceFeatureAssignmentIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50434,6 +50705,7 @@
           },
           "ResourceFeatureIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50442,7 +50714,7 @@
             "description": "Unique identifiers of [Resource features](https://mews-systems.gitbook.io/connector-api/operations/#resource-feature) to which the resource feature assignments belong."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -50537,6 +50809,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50547,6 +50820,7 @@
           },
           "ResourceFeatureIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50565,7 +50839,7 @@
             "description": "Unique identifiers of [Services](https://mews-systems.gitbook.io/connector-api/operations/services/#service) to which the resource features belong."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ActivityStates": {
             "type": "array",
@@ -50634,6 +50908,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50644,6 +50919,7 @@
           },
           "ResourceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -50653,6 +50929,8 @@
             "nullable": true
           },
           "Names": {
+            "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -50663,10 +50941,10 @@
             "$ref": "#/components/schemas/ResourceExtent"
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -51151,6 +51429,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -51560,6 +51839,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -51591,7 +51871,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -51958,6 +52238,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -51986,7 +52267,7 @@
             "description": "Unique identifiers of the [Services](https://mews-systems.gitbook.io/connector-api/operations/services/#service)."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Extent": {
             "$ref": "#/components/schemas/RuleExtent"
@@ -52457,6 +52738,7 @@
           },
           "AvailabilityUpdates": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ServiceAvailabilityUpdateData"
@@ -52497,6 +52779,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -52507,6 +52790,7 @@
           },
           "ServiceIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -52516,7 +52800,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -52782,6 +53066,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -52802,6 +53087,7 @@
           },
           "ServiceOrderNoteIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -52811,7 +53097,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -53113,6 +53399,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -53132,7 +53419,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -53199,7 +53486,7 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "Limitation": {
             "$ref": "#/components/schemas/Limitation"
@@ -53443,6 +53730,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -53451,19 +53739,17 @@
             "nullable": true
           },
           "CreatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
-          },
-          "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ClosedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "DeadlineUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "TaskIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -53474,6 +53760,7 @@
           },
           "DepartmentIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -53484,6 +53771,7 @@
           },
           "ServiceOrderIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -53760,6 +54048,22 @@
         },
         "additionalProperties": false,
         "x-schema-id": "TimeFilterInterval"
+      },
+      "TimeFilterIntervalMax1": {
+        "title": "TimeFilterInterval",
+        "type": "object",
+        "properties": {
+          "StartUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "EndUtc": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "x-schema-id": "TimeFilterIntervalMax1",
+        "x-max-interval-in-months": 1
       },
       "TimeFilterIntervalMax3": {
         "title": "TimeFilterInterval",
@@ -54390,6 +54694,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -54400,6 +54705,7 @@
           },
           "VoucherCodeIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -54410,6 +54716,7 @@
           },
           "VoucherIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -54418,7 +54725,7 @@
             "description": "Unique identifiers of vouchers."
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           }
         },
         "additionalProperties": false,
@@ -54507,6 +54814,7 @@
           },
           "EnterpriseIds": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string",
@@ -54541,6 +54849,7 @@
           },
           "VoucherCodeValues": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
@@ -54558,10 +54867,11 @@
             "nullable": true
           },
           "UpdatedUtc": {
-            "$ref": "#/components/schemas/TimeFilterInterval"
+            "$ref": "#/components/schemas/TimeFilterIntervalMax3"
           },
           "ExternalIdentifiers": {
             "maxItems": 1000,
+            "minItems": 1,
             "type": "array",
             "items": {
               "type": "string"
