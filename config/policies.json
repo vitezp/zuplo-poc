@@ -1,3 +1,100 @@
 {
-  "policies": []
+  "policies": [
+    {
+      "handler": {
+        "export": "ApiKeyInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "allowUnauthenticatedRequests": false,
+          "cacheTtlSeconds": 60
+        }
+      },
+      "name": "api-key-inbound",
+      "policyType": "api-key-inbound"
+    },
+    {
+      "handler": {
+        "export": "ComplexRateLimitInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "rateLimitBy": "user",
+          "limits": {
+            "compute": 500,
+            "get": 50,
+            "write": 10
+          },
+          "timeWindowMinutes": 0.1
+        }
+      },
+      "name": "complex-rate-limit-inbound",
+      "policyType": "complex-rate-limit-inbound"
+    },
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/unwrap-metadata-body)"
+      },
+      "name": "unwrap-metadata-body",
+      "policyType": "custom-code-inbound"
+    },
+    {
+      "handler": {
+        "export": "ChangeMethodInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "method": "POST"
+        }
+      },
+      "name": "change-method-inbound",
+      "policyType": "change-method-inbound"
+    },
+    {
+      "handler": {
+        "export": "SetBodyInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "body": ""
+        }
+      },
+      "name": "set-body-inbound",
+      "policyType": "set-body-inbound"
+    },
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/set-complexity-counter)"
+      },
+      "name": "set-complexity-counter",
+      "policyType": "custom-code-outbound"
+    },
+    {
+      "handler": {
+        "export": "RateLimitInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "rateLimitBy": "function",
+          "requestsAllowed": 2,
+          "timeWindowMinutes": 1,
+          "identifier": {
+            "module": "$import(./modules/complex-rate-limit)",
+            "export": "dynamicRateLimiting"
+          }
+        }
+      },
+      "name": "rate-limit-inbound",
+      "policyType": "rate-limit-inbound"
+    },
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/use-case-demo)",
+        "options": {
+          "config1": "YOUR_VALUE",
+          "config2": true
+        }
+      },
+      "name": "custom-code-inbound",
+      "policyType": "custom-code-inbound"
+    }
+  ]
 }

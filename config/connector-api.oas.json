@@ -12,7 +12,7 @@
   },
   "servers": [
     {
-      "url": "https://app.mews-demo.com"
+      "url": "https://api.mews-demo.com"
     }
   ],
   "paths": {
@@ -177,6 +177,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -306,6 +326,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -443,6 +483,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -542,6 +602,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -690,6 +770,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -837,6 +937,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -999,7 +1119,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/accounts/update": {
@@ -1453,6 +1593,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -1566,6 +1726,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -1702,6 +1882,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -1830,6 +2030,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -1971,6 +2191,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -2071,6 +2311,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -2228,6 +2488,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -2368,6 +2648,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -2468,6 +2768,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -2681,6 +3001,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -2811,6 +3151,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -2940,6 +3300,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -3078,6 +3458,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -3214,7 +3614,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/bills/getAllByCustomers": {
@@ -3350,7 +3770,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/bills/getAllClosed": {
@@ -3486,7 +3926,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/bills/getPdf": {
@@ -3592,6 +4052,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -3705,6 +4185,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -3804,6 +4304,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -3963,6 +4483,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -4100,6 +4640,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -4240,6 +4800,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -4368,6 +4948,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -4493,6 +5093,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -4620,6 +5240,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -4743,6 +5383,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -4846,6 +5506,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -4948,6 +5628,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -5056,6 +5756,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -5153,6 +5873,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -5353,6 +6093,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -5583,6 +6343,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -5782,6 +6562,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -5881,6 +6681,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -6057,7 +6877,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/companionships/getAll": {
@@ -6189,6 +7029,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -6329,6 +7189,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -6473,6 +7353,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -6639,6 +7539,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -6742,6 +7662,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -6913,6 +7853,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -7080,6 +8040,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -7211,6 +8191,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -7344,6 +8344,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -7463,7 +8483,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/creditCards/getAllByCustomers": {
@@ -7580,7 +8620,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/creditCards/addTokenized": {
@@ -7683,6 +8743,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -7791,6 +8871,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -7898,6 +8998,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -8091,6 +9211,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -8246,7 +9386,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/customers/getAllByEmails": {
@@ -8403,7 +9563,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/customers/search": {
@@ -8539,6 +9719,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -8696,7 +9896,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/customers/getOpenItems": {
@@ -8843,7 +10063,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/customers/add": {
@@ -9065,6 +10305,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -9281,6 +10541,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -9380,7 +10660,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/customers/addFile": {
@@ -9480,6 +10780,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -9613,6 +10933,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -9717,6 +11057,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -9861,6 +11221,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -9970,6 +11350,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -10081,6 +11481,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -10225,6 +11645,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -10337,6 +11777,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -10448,6 +11908,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -10564,6 +12044,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -10708,6 +12208,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -10830,6 +12350,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -10961,6 +12501,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -11059,6 +12619,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -11189,6 +12769,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -11305,6 +12905,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -11428,6 +13048,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -11527,6 +13167,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -11658,6 +13318,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -11773,6 +13453,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -11895,6 +13595,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -11994,6 +13714,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -12115,6 +13855,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -12224,6 +13984,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -12350,6 +14130,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -12466,6 +14266,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -12802,6 +14622,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -12925,6 +14765,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -13063,6 +14923,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -13243,6 +15123,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -13374,6 +15274,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -13526,6 +15446,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -13671,6 +15611,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -13803,6 +15763,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -14061,6 +16041,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -14170,6 +16170,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -14284,6 +16304,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -14391,6 +16431,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -14501,6 +16561,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -14634,6 +16714,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -14803,6 +16903,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -14943,6 +17063,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -15104,6 +17244,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -15318,6 +17478,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -15417,6 +17597,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -15558,6 +17758,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -15719,6 +17939,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -15857,6 +18097,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -16068,6 +18328,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -16177,6 +18457,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -16300,6 +18600,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -16477,7 +18797,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/reservations/getAll/2023-06-06": {
@@ -16652,6 +18992,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -16868,7 +19228,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/reservations/getAllByIds": {
@@ -17079,7 +19459,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/reservations/getAllByCustomers": {
@@ -17290,7 +19690,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/reservations/getAllByNumbers": {
@@ -17501,7 +19921,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/reservations/price": {
@@ -17641,6 +20081,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -17837,6 +20297,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -18109,6 +20589,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -18213,6 +20713,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -18310,6 +20830,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -18411,6 +20951,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -18519,6 +21079,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -18617,6 +21197,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -18719,6 +21319,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -18817,6 +21437,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -18914,6 +21554,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -19027,6 +21687,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -19178,7 +21858,27 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
+        }
       }
     },
     "/api/connector/v1/resourceAccessTokens/getAll": {
@@ -19323,6 +22023,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -19471,6 +22191,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -19617,6 +22357,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -19715,6 +22475,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -19864,6 +22644,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -20002,6 +22802,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -20101,6 +22921,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -20261,6 +23101,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -20399,6 +23259,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -20539,6 +23419,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -20667,6 +23567,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -20801,6 +23721,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -21050,6 +23990,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -21171,6 +24131,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -21372,6 +24352,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -21471,6 +24471,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -21615,6 +24635,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -21753,6 +24793,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -21949,6 +25009,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -22094,6 +25174,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -22246,6 +25346,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -22425,6 +25545,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -22524,6 +25664,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -22700,6 +25860,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -22812,6 +25992,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -22927,6 +26127,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -23049,6 +26269,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -23147,6 +26387,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -23311,6 +26571,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -23424,6 +26704,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -23558,6 +26858,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -23756,6 +27076,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -23879,6 +27219,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -24012,6 +27372,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -24144,6 +27524,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -24247,6 +27647,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -24375,6 +27795,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -24532,6 +27972,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -24667,6 +28127,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -24767,6 +28247,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -24905,6 +28405,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -25086,6 +28606,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -25242,6 +28782,26 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
           }
         }
       }
@@ -25420,6 +28980,26 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
       }
     },
@@ -25521,7 +29101,52 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://app.mews-demo.com"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "unwrap-metadata-body",
+              "complex-rate-limit-inbound"
+            ],
+            "outbound": [
+              "set-complexity-counter"
+            ]
+          }
         }
+      }
+    },
+    "/api/connector/v1/reservations/getAll-enriched": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "GetAll reservations enriched",
+        "description": "Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do `eiusmod tempor` incididunt ut labore et dolore magna aliqua.",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "default",
+            "module": "$import(./modules/use-case-demo)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "complex-rate-limit-inbound",
+              "unwrap-metadata-body"
+            ]
+          }
+        },
+        "operationId": "d0ca2045-cd35-4e94-aa74-8e605c7da542"
       }
     }
   },
