@@ -5,8 +5,8 @@ export default async function (request: ZuploRequest, context: ZuploContext) {
   const obj = await request.json();
 
   // Modify the object as required
-  obj.accessToken = request.user.data.AccessToken;
-  obj.clientToken = request.user.data.ClientToken;
+  obj.AccessToken = request.user.data.AccessToken;
+  obj.ClientToken = request.user.data.ClientToken;
   
 
   // Stringify the object
