@@ -23,7 +23,7 @@ export default async function policy(
       context.log.info('missing limitation, compute 20')
       ComplexRateLimitInboundPolicy.setIncrements(context, { compute: 20 });
   }
-  if (jsonBody.Extent?.Items == true){
+  if (jsonBody.Extent?.Items){
       context.log.info('using extents, compute 20')
       ComplexRateLimitInboundPolicy.setIncrements(context, { compute: 20 });
   }

@@ -5,7 +5,7 @@
         "export": "ApiKeyInboundPolicy",
         "module": "$import(@zuplo/runtime)",
         "options": {
-          "allowUnauthenticatedRequests": false,
+          "allowUnauthenticatedRequests": true,
           "cacheTtlSeconds": 60
         }
       },
@@ -93,6 +93,19 @@
       },
       "name": "complex-rate-limit-inbound",
       "policyType": "complex-rate-limit-inbound"
+    },
+    {
+      "handler": {
+        "export": "RateLimitInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "rateLimitBy": "function",
+          "requestsAllowed": 50,
+          "timeWindowMinutes": 1
+        }
+      },
+      "name": "basic-rate-limit",
+      "policyType": "rate-limit-inbound"
     }
   ]
 }
